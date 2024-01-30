@@ -1,5 +1,10 @@
 # Chat Web App
 
+## Languages and frameworks
+This project uses the React framework Next.js with TypeScript.
+
+This project also uses Tailwind for styling.
+
 ## Development
 
 Make sure Node.js is installed by running the following command in the cmd
