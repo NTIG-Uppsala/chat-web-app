@@ -28,7 +28,7 @@ node --version
 
 [Install Node.js here](https://nodejs.org/en/download)
 
-First install the node modules by running:
+Install the node modules by running:
 ```cmd
 npm install
 ```
