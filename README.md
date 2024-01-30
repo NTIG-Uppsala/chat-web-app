@@ -10,9 +10,9 @@ This project also uses Tailwind for styling.
 
 ESLint is used for linting and follows the rules set in [.eslintrc.json](.eslintrc.json)
 
-## Naming conventions
+### Naming conventions
 
-* File names: kebab-case
+* File names (excluding README.md and .gitignore): kebab-case
 
 * React component names: PascalCase
 
