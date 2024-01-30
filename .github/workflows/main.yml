@@ -6,9 +6,8 @@ on:
     - main
 
 jobs:
-  check_code_formatting:
+  check_code:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: check code formatting with eslint
-      run: npm run lint
+    - run: npm run lint
