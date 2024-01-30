@@ -10,6 +10,14 @@ This project also uses Tailwind for styling.
 
 ESLint is used for linting and follows the rules set in [.eslintrc.json](.eslintrc.json)
 
+## Naming conventions
+
+* File names: kebab-case
+
+* React component names: PascalCase
+
+* Variable and function names: camelCase
+
 ## Development
 
 Make sure Node.js is installed by running the following command in the cmd
