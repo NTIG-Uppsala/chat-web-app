@@ -2,9 +2,21 @@
 
 ## Development
 
-First, run the development server:
+Make sure Node.js is installed by running the following command in the cmd
 
-```bash
+```cmd
+node --version
+```
+
+[Install Node.js here](https://nodejs.org/en/download)
+
+First install the node modules by running:
+```cmd
+npm install
+```
+Run the development server:
+
+```cmd
 npm run dev
 ```
 
