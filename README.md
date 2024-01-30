@@ -1,10 +1,40 @@
 # Chat Web App
 
+## Languages and frameworks
+
+This project uses the React framework Next.js with TypeScript.
+
+This project also uses Tailwind for styling.
+
+## Coding standard
+
+ESLint is used for linting and follows the rules set in [.eslintrc.json](.eslintrc.json)
+
+### Naming conventions
+
+* File names (excluding README.md and .gitignore): kebab-case
+
+* React component names: PascalCase
+
+* Variable and function names: camelCase
+
 ## Development
 
-First, run the development server:
+Make sure Node.js is installed by running the following command in the cmd
 
-```bash
+```cmd
+node --version
+```
+
+[Install Node.js here](https://nodejs.org/en/download)
+
+Install the node modules by running:
+```cmd
+npm install
+```
+Run the development server:
+
+```cmd
 npm run dev
 ```
 
