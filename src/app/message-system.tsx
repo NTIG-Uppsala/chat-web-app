@@ -26,6 +26,15 @@ export default function MessageSystem() {
 
   var socket = io("http://localhost:3001");
 
+  useEffect(() => {
+    socket.on("receive_msg", (message: messageType) => {
+      setMessages((previous) => [...previous, message]);
+    });
+    return (() => {
+      socket.removeListener("receive_msg");
+   })
+  }, []);
+
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -52,7 +61,9 @@ export default function MessageSystem() {
         </form>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <Message name="Name Here" message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsam delectus reiciendis tempora porro amet!" />
+        {messages.map((message, index) => (
+          <Message key={index} name={message.username} message={message.message}></Message>
+        ))}
       </div>
     </div>
   );
