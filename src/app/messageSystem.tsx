@@ -17,20 +17,7 @@ export default function MessageSystem() {
                 </form>
             </div>
             <div className="flex flex-col justify-center items-center">
-                <Message name="John Doe" message="Hello, how are you today?yfyiktfytfyujtfjytfjytfrftgyhujikoijuhygfcvgbhjiuhyhgtvbhjn" />
-                <Message name="John Doe" message="Hello, how are you today?" />
-                <Message name="John Doe" message="Hello, how are you today?yfyiktfytfyujtfjytfjytfrftgyhujikoijuhygfcvgbhjiuhyhgtvbhjn" />
-                <Message name="John Doe" message="Hello, how are you today?" />
-                <Message name="John Doe" message="Hello, how are you today?yfyiktfytfyujtfjytfjytfrftgyhujikoijuhygfcvgbhjiuhyhgtvbhjn" />
-                <Message name="John Doe" message="Hello, how are you today?" />
-                <Message name="John Doe" message="Hello, how are you today?yfyiktfytfyujtfjytfjytfrftgyhujikoijuhygfcvgbhjiuhyhgtvbhjn" />
-                <Message name="John Doe" message="Hello, how are you today?" />
-                <Message name="John Doe" message="Hello, how are you today?yfyiktfytfyujtfjytfjytfrftgyhujikoijuhygfcvgbhjiuhyhgtvbhjn" />
-                <Message name="John Doe" message="Hello, how are you today?" />
-                <Message name="John Doe" message="Hello, how are you today?yfyiktfytfyujtfjytfjytfrftgyhujikoijuhygfcvgbhjiuhyhgtvbhjn" />
-                <Message name="John Doe" message="Hello, how are you today?" />
-                <Message name="John Doe" message="Hello, how are you today?yfyiktfytfyujtfjytfjytfrftgyhujikoijuhygfcvgbhjiuhyhgtvbhjn" />
-                <Message name="John Doe" message="Hello, how are you today?" />
+                <Message name="Name Here" message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsam delectus reiciendis tempora porro amet!" />
             </div>
         </div>
     );
