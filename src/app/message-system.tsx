@@ -1,19 +1,24 @@
 import Message from "./messages";
 
+function InputWithButton(props: { name: string, placeholder: string, buttonText: string}) {
+  return (
+    <>
+      <input type="text" name={props.name} className="bg-slate-300 m-2" placeholder={props.placeholder} />
+        <button className="bg-slate-200 hover:bg-slate-300 px-2">
+          {props.buttonText}
+        </button>
+    </>
+  );
+}
+
 export default function MessageSystem() {
   return (
     <div>
       <div className="flex justify-center my-8">
         <form>
-          <input type="text" name="username" className="bg-slate-300 m-2" placeholder="Choose a username" />
-          <button className="bg-slate-200 hover:bg-slate-300 px-2">
-            Confirm
-          </button>
+          <InputWithButton name="username" placeholder="Choose a username" buttonText="Confirm"></InputWithButton>
           <br />
-          <input type="text" name="message" className="bg-slate-300 m-2" placeholder="Send Message" />
-          <button className="bg-slate-200 hover:bg-slate-300 px-2">
-            Send
-          </button>
+          <InputWithButton name="message" placeholder="Send Message" buttonText="Send"></InputWithButton>
         </form>
       </div>
       <div className="flex flex-col justify-center items-center">
