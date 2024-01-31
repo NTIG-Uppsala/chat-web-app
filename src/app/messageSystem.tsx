@@ -5,9 +5,7 @@ export default function MessageSystem() {
         <div>
             <div className="flex justify-center my-8">
                 <form>
-                    <label>
-                        <input type="text" name="name" className="bg-slate-300" placeholder="Send Message" />
-                    </label>
+                    <input type="text" name="name" className="bg-slate-300" placeholder="Send Message" />
                     <button className="bg-slate-200 hover:bg-slate-300 px-2">
                         Send
                     </button>
