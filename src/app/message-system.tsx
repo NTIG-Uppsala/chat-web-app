@@ -45,7 +45,7 @@ export default function MessageSystem() {
     socket.emit("send_message", message);
 
     const messageInput = document.getElementById("messageInput") as HTMLInputElement;
-    if (messageInput !== null) {
+    if (messageInput) {
       messageInput.value = "";
       setCurrentMessage("");
     }
