@@ -1,4 +1,4 @@
-import MessageSystem from "./messageSystem";
+import MessageSystem from "./message-system";
 
 export default function Home() {
   return (
