@@ -1,3 +1,9 @@
+import MessageSystem from "./messageSystem";
+
 export default function Home() {
-  return;
+  return (
+    <div>
+      <MessageSystem />
+    </div>
+  );
 }
