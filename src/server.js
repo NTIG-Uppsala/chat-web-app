@@ -14,6 +14,10 @@ const io = new Server(httpServer, {
 
 io.on("connection", (socket) => {
     console.log("A user connected:", socket.id);
+
+    socket.on("send_message", (message) => {
+        console.log("Sent message:", message)
+    })
 });
 
 const PORT = 3001;
