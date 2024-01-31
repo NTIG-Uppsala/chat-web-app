@@ -1,7 +1,8 @@
 "use client"
+import { DefaultEventsMap } from "@socket.io/component-emitter";
 import Message from "./messages";
-import { useState, useEffect, ChangeEvent, FormEvent } from "react";
-import { io } from "socket.io-client";
+import { useState, useEffect, ChangeEvent, FormEvent, useRef } from "react";
+import { Socket, io } from "socket.io-client";
 
 function MessageInputAndButton(props: { disabled: boolean, changeHandler: (event: ChangeEvent<HTMLInputElement>)=>void }) {
   return (
@@ -23,15 +24,15 @@ export default function MessageSystem() {
   const [user, setUser] = useState("");
   const [currentMessage, setCurrentMessage] = useState("");
   const [messages, setMessages] = useState<messageType[]>([]);
-
-  var socket = io("http://localhost:3001");
+  const socketRef = useRef<Socket<DefaultEventsMap, DefaultEventsMap>>();
 
   useEffect(() => {
-    socket.on("receive_msg", (message: messageType) => {
+    socketRef.current = io("http://localhost:3001");
+    socketRef.current.on("receive_msg", (message: messageType) => {
       setMessages((previous) => [...previous, message]);
     });
     return (() => {
-      socket.removeListener("receive_msg");
+      socketRef.current?.removeListener("receive_msg");
    })
   }, []);
 
@@ -42,7 +43,7 @@ export default function MessageSystem() {
       username: user,
       message: currentMessage
     }
-    socket.emit("send_message", message);
+    socketRef.current?.emit("send_message", message);
 
     const messageInput = document.getElementById("messageInput") as HTMLInputElement;
     if (messageInput) {
