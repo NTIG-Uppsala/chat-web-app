@@ -33,6 +33,7 @@ export default function MessageSystem() {
     });
     return (() => {
       socketRef.current?.removeListener("receive_msg");
+      socketRef.current?.close();
    })
   }, []);
 
