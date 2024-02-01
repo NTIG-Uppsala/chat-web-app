@@ -4,13 +4,13 @@ import Message from "./messages";
 import { useState, useEffect, ChangeEvent, FormEvent, useRef } from "react";
 import { Socket, io } from "socket.io-client";
 
-function MessageInputAndButton(props: { disabled: boolean, changeHandler: (event: ChangeEvent<HTMLInputElement>)=>void }) {
+function MessageInputAndButton(props: { disabled: boolean, changeHandler: (event: ChangeEvent<HTMLInputElement>) => void }) {
   return (
     <>
-      <input type="text" id="messageInput" name="message" className="bg-slate-300 m-2" placeholder="New message" onChange={props.changeHandler}/>
-        <button className="bg-slate-200 hover:bg-slate-300 px-2" disabled={props.disabled}>
-          Send
-        </button>
+      <input type="text" id="messageInput" name="message" className="bg-slate-300 m-2" placeholder="New message" onChange={props.changeHandler} />
+      <button className="bg-slate-200 hover:bg-slate-300 px-2" disabled={props.disabled}>
+        Send
+      </button>
     </>
   );
 }
@@ -34,7 +34,7 @@ export default function MessageSystem() {
     return (() => {
       socketRef.current?.removeListener("receive_msg");
       socketRef.current?.close();
-   })
+    })
   }, []);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -57,7 +57,7 @@ export default function MessageSystem() {
     <div>
       <div className="flex justify-center my-8">
         <form onSubmit={handleSubmit}>
-          <input type="text" name="username" className="bg-slate-300 m-2" placeholder="Choose a username" onChange={(e) => setUser(e.target.value)}/>
+          <input type="text" name="username" className="bg-slate-300 m-2" placeholder="Choose a username" onChange={(e) => setUser(e.target.value)} />
           <br />
           <MessageInputAndButton disabled={user === "" || currentMessage === ""} changeHandler={(e) => setCurrentMessage(e.target.value)}></MessageInputAndButton>
         </form>
