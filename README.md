@@ -6,6 +6,8 @@ This project uses the React framework Next.js with TypeScript.
 
 This project also uses Tailwind for styling.
 
+JavaScript is used for the chat server and some config files.
+
 ## Coding standard
 
 ESLint is used for linting and follows the rules set in [.eslintrc.json](.eslintrc.json)
