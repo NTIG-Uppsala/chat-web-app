@@ -28,11 +28,11 @@ export default function MessageSystem() {
 
   useEffect(() => {
     socketRef.current = io("http://localhost:3001");
-    socketRef.current.on("receive_msg", (message: messageType) => {
+    socketRef.current.on("receive_message", (message: messageType) => {
       setMessages((previous) => [...previous, message]);
     });
     return (() => {
-      socketRef.current?.removeListener("receive_msg");
+      socketRef.current?.removeListener("receive_message");
       socketRef.current?.close();
     })
   }, []);
